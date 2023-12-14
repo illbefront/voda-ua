@@ -38,6 +38,8 @@ const handleOrder = () => {
 
   console.log(phoneInputMask.value);
 
+  phoneInputMask.value = "";
+
   orderBlockDefault.style.display = "none";
   orderBlockSuccess.style.display = "flex";
 
@@ -55,6 +57,8 @@ const handleDialogOrder = () => {
     return;
 
   console.log(dialogPhoneInputMask.value);
+
+  dialogPhoneInputMask.value = "";
 
   dialogOrderBlockDefault.style.display = "none";
   dialogOrderBlockSuccess.style.display = "flex";
