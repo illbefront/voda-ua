@@ -292,6 +292,16 @@ footer .socmedia-block {
   flex-direction: column;
 }
 
+.order-dialog_container .order-block_description {
+  text-align: center;
+  font-family: Roboto Condensed;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: -14px;
+}
+
 /*---*/
 
 /*main*/
@@ -425,8 +435,8 @@ footer .socmedia-block {
   line-height: 45px;
 }
 
-.contact .order-block .policy,
-.order-dialog .order-block .policy {
+.contact .order-block .order-block_policy,
+.order-dialog .order-block .order-block_policy {
   font-family: Roboto Condensed;
   font-size: 16px;
   font-style: normal;
@@ -534,6 +544,10 @@ footer .socmedia-block {
     top: 20px;
     left: 20px;
     right: 20px;
+  }
+
+  .order-dialog_container .order-block_description {
+    display: none;
   }
   /*---*/
 
