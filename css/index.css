@@ -90,7 +90,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -125,7 +124,6 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
   content: none;
 }
 table {
@@ -149,7 +147,7 @@ section {
 
 h1 {
   font-size: 98px;
-  font-family: Roboto Condensed;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 95px;
@@ -157,7 +155,7 @@ h1 {
 }
 
 h2 {
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
@@ -174,7 +172,7 @@ button {
   padding: 20px 60px;
   background: var(--light-blue);
   color: var(--white);
-  font-family: Roboto Condensed;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -206,7 +204,7 @@ header .contact-section {
 
 header .contact-section span {
   color: var(--dark-grey);
-  font-family: Roboto Condensed;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -225,7 +223,7 @@ footer {
 }
 
 footer .copyright {
-  font-family: Roboto Condensed;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -294,7 +292,7 @@ footer .socmedia-block {
 
 .order-dialog_container .order-block_description {
   text-align: center;
-  font-family: Roboto Condensed;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 11px;
   font-style: normal;
   font-weight: 300;
@@ -385,7 +383,7 @@ footer .socmedia-block {
 .catalog ul .text-wrapper {
   padding: 20px 20px 40px 20px;
   text-align: center;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -428,7 +426,7 @@ footer .socmedia-block {
 .contact .order-block h3,
 .order-dialog .order-block h3 {
   text-align: center;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -437,7 +435,7 @@ footer .socmedia-block {
 
 .contact .order-block .order-block_policy,
 .order-dialog .order-block .order-block_policy {
-  font-family: Roboto Condensed;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -457,7 +455,7 @@ footer .socmedia-block {
 .order-dialog .order-block .order-block_form input {
   color: var(--dark-grey);
   text-align: center;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 300;
@@ -477,7 +475,7 @@ footer .socmedia-block {
 
 .contact .socmedia-block h3 {
   text-align: center;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -492,7 +490,7 @@ footer .socmedia-block {
 .contact .socmedia-block .links a {
   flex-basis: 50%;
   background: #d2f3ff40;
-  font-family: Roboto Condensed;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
