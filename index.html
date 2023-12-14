@@ -261,53 +261,45 @@
     </footer>
 
     <dialog class="order-dialog">
-      <form method="dialog">
-        <div class="order-dialog_header">
-          <img src="assets/images/logo_dark.svg" alt="logo" />
-          <button class="icon-button">
-            <img src="assets/icons/cross.svg" alt="close" />
-          </button>
-        </div>
-        <div class="order-dialog_container">
-          <div
-            id="order-dialog_order-block_default"
-            class="order-block default"
-          >
-            <h2>Замовляйте рідну VODA UA за номером телефону</h2>
-            <div class="order-block_form">
-              <input
-                id="dialog_order-block_phone-input"
-                type="text"
-                inputmode="numeric"
-                name="phone"
-                placeholder="+380 93 984 20 48"
-              />
-              <button
-                id="dialog_order-block_submit-button"
-                class="with-border with-hover_white order-action-button"
-                type="button"
-              >
-                Замовити
-              </button>
-            </div>
-            <p class="order-block_policy">
-              Згідний на обробку персональних данних.
-            </p>
-            <p class="order-block_description">
-              Доставка здійснюється нашими кур'єрами по Києву. Відправлення в
-              інші міста здійснюються за тарифами Нової Пошти до найближчого
-              відділення.
-            </p>
+      <div class="order-dialog_header">
+        <img src="assets/images/logo_dark.svg" alt="logo" />
+        <button id="close-order-dialog-button" class="icon-button">
+          <img src="assets/icons/cross.svg" alt="close" />
+        </button>
+      </div>
+      <div class="order-dialog_container">
+        <div id="order-dialog_order-block_default" class="order-block default">
+          <h2>Замовляйте рідну VODA UA за номером телефону</h2>
+          <div class="order-block_form">
+            <input
+              id="dialog_order-block_phone-input"
+              type="text"
+              inputmode="numeric"
+              name="phone"
+              placeholder="+380 93 984 20 48"
+            />
+            <button
+              id="dialog_order-block_submit-button"
+              class="with-border with-hover_white order-action-button"
+              type="button"
+            >
+              Замовити
+            </button>
           </div>
-          <div
-            id="order-dialog_order-block_success"
-            class="order-block success"
-          >
-            <h2>Дякуємо за ваш запит.</h2>
-            <h3>Ми зв`яжемось з вами найближчим часом!</h3>
-          </div>
+          <p class="order-block_policy">
+            Згідний на обробку персональних данних.
+          </p>
+          <p class="order-block_description">
+            Доставка здійснюється нашими кур'єрами по Києву. Відправлення в інші
+            міста здійснюються за тарифами Нової Пошти до найближчого
+            відділення.
+          </p>
         </div>
-      </form>
+        <div id="order-dialog_order-block_success" class="order-block success">
+          <h2>Дякуємо за ваш запит.</h2>
+          <h3>Ми зв`яжемось з вами найближчим часом!</h3>
+        </div>
+      </div>
     </dialog>
     <script src="https://unpkg.com/imask"></script>
     <script src="js/index.js"></script>

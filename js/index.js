@@ -5,6 +5,7 @@ const phoneInput = document.getElementById("order-block_phone-input");
 const submitButton = document.getElementById("order-block_submit-button");
 
 // dialog
+const closeDialogButton = document.getElementById("close-order-dialog-button");
 const dialogOrderBlockDefault = document.getElementById(
   "order-dialog_order-block_default",
 );
@@ -25,6 +26,9 @@ const maskOptions = {
 };
 const phoneInputMask = IMask(phoneInput, maskOptions);
 const dialogPhoneInputMask = IMask(dialogPhoneInput, maskOptions);
+
+// flags
+let originalBodyStyle;
 
 const handleOrder = () => {
   if (
@@ -63,11 +67,21 @@ const handleDialogOrder = () => {
 
 const handleDialogOpen = () => {
   orderDialog.setAttribute("open", "true");
+
+  originalBodyStyle = window.getComputedStyle(document.body).overflow;
+  document.body.style.overflow = "hidden";
+};
+
+const handleDialogClose = () => {
+  orderDialog.removeAttribute("open");
+
+  document.body.style.overflow = originalBodyStyle || "scroll";
 };
 
 Array.from(openDialogButtons).forEach((button) =>
   button.addEventListener("click", handleDialogOpen),
 );
 
+closeDialogButton.addEventListener("click", handleDialogClose);
 submitButton.addEventListener("click", handleOrder);
 dialogSubmitButton.addEventListener("click", handleDialogOrder);

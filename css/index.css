@@ -268,13 +268,6 @@ footer .socmedia-block {
   border: none;
 }
 
-.order-dialog form {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .order-dialog_header {
   position: absolute;
   top: 60px;
@@ -286,8 +279,11 @@ footer .socmedia-block {
 }
 
 .order-dialog_container {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .order-dialog_container .order-block_description {
