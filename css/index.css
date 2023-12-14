@@ -575,6 +575,7 @@ footer .socmedia-block {
     order: 2;
     margin-top: -55%;
     z-index: 3;
+    width: 100%;
   }
 
   .main .text-wrapper h1 {
@@ -708,7 +709,6 @@ footer .socmedia-block {
 
   .contact .order-block .order-block_form input,
   .order-dialog .order-block .order-block_form input {
-    width: 200%;
     font-size: 16px;
   }
 
