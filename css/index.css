@@ -181,6 +181,7 @@ button {
   border: none;
   width: fit-content;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 header {
@@ -467,6 +468,11 @@ footer .socmedia-block {
   display: flex;
   align-items: center;
   column-gap: 10px;
+  width: 50%;
+}
+
+.order-dialog .order-block .order-block_form {
+  width: 76%;
 }
 
 .contact .order-block .order-block_form input,
@@ -482,6 +488,7 @@ footer .socmedia-block {
   text-transform: uppercase;
   height: 65.5px;
   border: none;
+  width: 100%;
 }
 
 .contact .socmedia-block {
@@ -648,6 +655,16 @@ footer .socmedia-block {
   .contact .order-block,
   .order-dialog .order-block {
     min-height: 289px;
+  }
+
+  .contact .order-block .order-block_form,
+  .order-dialog .order-block .order-block_form {
+    width: 100%;
+  }
+
+  .contact .order-block .order-block_form .order-action-button,
+  .order-dialog .order-block .order-block_form .order-action-button {
+    width: fit-content;
   }
 
   .contact .socmedia-block {
