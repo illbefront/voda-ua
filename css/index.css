@@ -729,8 +729,9 @@ footer .socmedia-block {
   /*---*/
 
   /*contact*/
-  .contact .order-block,
-  .order-dialog .order-block {
+  .contact .order-block {
+    width: calc(100% + 40px);
+    margin-left: -20px;
     min-height: 224px;
   }
 
@@ -749,11 +750,6 @@ footer .socmedia-block {
   .contact .order-block .order-block_form,
   .order-dialog .order-block .order-block_form {
     column-gap: 7px;
-  }
-
-  .contact .order-block .order-block_form input,
-  .order-dialog .order-block .order-block_form input {
-    font-size: 16px;
   }
 
   .contact .order-block .order-block_form button,
