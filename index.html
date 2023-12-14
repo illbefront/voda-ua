@@ -19,12 +19,13 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.svg" alt="logo" />
+      <img src="assets/images/logo_light.svg" alt="logo" />
       <a href="tel:+380674255050" class="contact-section">
         <img src="assets/icons/phone.svg" alt="phone" />
         <span>+38 067 425 50 50</span>
       </a>
     </header>
+
     <div style="overflow-x: hidden">
       <div class="container">
         <section class="main">
@@ -36,7 +37,7 @@
               Замовляйте рідну воду <a href="#">VODA UA</a> зручним для вас
               способом.
             </h2>
-            <button>Замовити</button>
+            <button class="open-dialog-button">Замовити</button>
           </div>
           <div class="image-wrapper">
             <img
@@ -63,7 +64,7 @@
           <ul>
             <li>
               <div class="image-wrapper">
-                <button>Замовити</button>
+                <button class="open-dialog-button">Замовити</button>
                 <img
                   src="assets/catalog/product_1.png"
                   alt="VODA UA у скляній пляшці негазована 0,4 л"
@@ -73,11 +74,11 @@
               <div class="text-wrapper">
                 VODA UA у скляній пляшці негазована 0,4 л
               </div>
-              <button>Замовити</button>
+              <button class="open-dialog-button">Замовити</button>
             </li>
             <li>
               <div class="image-wrapper">
-                <button>Замовити</button>
+                <button class="open-dialog-button">Замовити</button>
                 <img
                   src="assets/catalog/product_2.png"
                   alt="VODA UA у скляній пляшці газована 0,4 л"
@@ -87,11 +88,11 @@
               <div class="text-wrapper">
                 VODA UA у скляній пляшці газована 0,4 л
               </div>
-              <button>Замовити</button>
+              <button class="open-dialog-button">Замовити</button>
             </li>
             <li>
               <div class="image-wrapper">
-                <button>Замовити</button>
+                <button class="open-dialog-button">Замовити</button>
                 <img
                   src="assets/catalog/product_3.png"
                   alt="VODA UA у пластиковій пляшці негазована 0,5 л"
@@ -101,11 +102,11 @@
               <div class="text-wrapper">
                 VODA UA у пластиковій пляшці негазована 0,5 л
               </div>
-              <button>Замовити</button>
+              <button class="open-dialog-button">Замовити</button>
             </li>
             <li>
               <div class="image-wrapper">
-                <button>Замовити</button>
+                <button class="open-dialog-button">Замовити</button>
                 <img
                   src="assets/catalog/product_4.png"
                   alt="VODA UA у пластиковій пляшці газована 0,5 л"
@@ -115,11 +116,11 @@
               <div class="text-wrapper">
                 VODA UA у пластиковій пляшці газована 0,5 л
               </div>
-              <button>Замовити</button>
+              <button class="open-dialog-button">Замовити</button>
             </li>
             <li>
               <div class="image-wrapper">
-                <button>Замовити</button>
+                <button class="open-dialog-button">Замовити</button>
                 <img
                   src="assets/catalog/product_5.png"
                   alt="VODA UA у пластиковій пляшці негазована 1,5 л"
@@ -129,11 +130,11 @@
               <div class="text-wrapper">
                 VODA UA у пластиковій пляшці негазована 1,5 л
               </div>
-              <button>Замовити</button>
+              <button class="open-dialog-button">Замовити</button>
             </li>
             <li>
               <div class="image-wrapper">
-                <button>Замовити</button>
+                <button class="open-dialog-button">Замовити</button>
                 <img
                   src="assets/catalog/product_6.png"
                   alt="VODA UA у пластиковій пляшці газована 1,5 л"
@@ -143,11 +144,11 @@
               <div class="text-wrapper">
                 VODA UA у пластиковій пляшці газована 1,5 л
               </div>
-              <button>Замовити</button>
+              <button class="open-dialog-button">Замовити</button>
             </li>
             <li>
               <div class="image-wrapper">
-                <button>Замовити</button>
+                <button class="open-dialog-button">Замовити</button>
                 <img
                   src="assets/catalog/product_7.png"
                   alt="VODA UA у пластиковій пляшці негазована 6 л"
@@ -157,14 +158,14 @@
               <div class="text-wrapper">
                 VODA UA у пластиковій пляшці негазована 6 л
               </div>
-              <button>Замовити</button>
+              <button class="open-dialog-button">Замовити</button>
             </li>
           </ul>
         </section>
         <section class="contact">
           <div class="order-block default">
             <h2>Замовляйте рідну VODA UA за номером телефону</h2>
-            <div class="form">
+            <div class="order-block_form">
               <input
                 type="tel"
                 inputmode="numeric"
@@ -194,7 +195,7 @@
                 <img src="assets/icons/telegram.svg" alt="telegram" />
               </a>
               <a href="mailto:office@vodaua.ua" class="email">
-                <p><span>Надіслати</span>&nbsp;<span>e-mail</span></p>
+                <p><span>Надіслати &nbsp;</span><span>e-mail</span></p>
                 <img src="assets/icons/envelope.svg" alt="email" />
               </a>
             </div>
@@ -202,6 +203,7 @@
         </section>
       </div>
     </div>
+
     <footer>
       <div class="copyright">© 2023 Усі права захищено. voda.ua</div>
       <div class="socmedia-block">
@@ -224,6 +226,40 @@
         <img src="assets/images/design_team.svg" alt="design" />
       </div>
     </footer>
+
+    <dialog class="order-dialog">
+      <form method="dialog">
+        <div class="order-dialog_header">
+          <img src="assets/images/logo_dark.svg" alt="logo" />
+          <button class="icon-button">
+            <img src="assets/icons/cross.svg" alt="close" />
+          </button>
+        </div>
+        <div class="order-dialog_container">
+          <div class="order-block default">
+            <h2>Замовляйте рідну VODA UA за номером телефону</h2>
+            <div class="order-block_form">
+              <input
+                type="tel"
+                inputmode="numeric"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                maxlength="10"
+                placeholder="+380 93 984 20 48"
+              />
+              <button class="with-border order-action-button" type="button">
+                Замовити
+              </button>
+            </div>
+            <p class="policy">Згідний на обробку персональних данних.</p>
+          </div>
+          <div class="order-block success">
+            <h2>Дякуємо за ваш запит.</h2>
+            <h3>Ми зв`яжемось з вами найближчим часом!</h3>
+          </div>
+        </div>
+      </form>
+    </dialog>
     <script src="js/index.js"></script>
   </body>
 </html>

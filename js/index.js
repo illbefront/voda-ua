@@ -1,15 +1,38 @@
-const defaultWindow = document.getElementsByClassName("order-block default")[0];
-const successWindow = document.getElementsByClassName("order-block success")[0];
-const orderButton = document.getElementsByClassName("order-action-button")[0];
+const defaultOrderBlocks = document.getElementsByClassName(
+  "order-block default",
+);
+const successOrderBlocks = document.getElementsByClassName(
+  "order-block success",
+);
+const orderDialog = document.getElementsByClassName("order-dialog")[0];
+const openDialogButtons = document.getElementsByClassName("open-dialog-button");
+const orderButtons = document.getElementsByClassName("order-action-button");
 
 const handleOrder = () => {
-  defaultWindow.style.display = "none";
-  successWindow.style.display = "flex";
+  Array.from(defaultOrderBlocks).forEach(
+    (block) => (block.style.display = "none"),
+  );
+  Array.from(successOrderBlocks).forEach(
+    (block) => (block.style.display = "flex"),
+  );
 
   setTimeout(() => {
-    defaultWindow.style.display = "flex";
-    successWindow.style.display = "none";
+    Array.from(defaultOrderBlocks).forEach(
+      (block) => (block.style.display = "flex"),
+    );
+    Array.from(successOrderBlocks).forEach(
+      (block) => (block.style.display = "none"),
+    );
   }, 2000);
 };
 
-orderButton.addEventListener("click", handleOrder);
+const handleDialogOpen = () => {
+  orderDialog.setAttribute("open", "true");
+};
+
+Array.from(openDialogButtons).forEach((button) =>
+  button.addEventListener("click", handleDialogOpen),
+);
+Array.from(orderButtons).forEach((button) =>
+  button.addEventListener("click", handleOrder),
+);

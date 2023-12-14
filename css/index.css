@@ -248,6 +248,50 @@ footer .socmedia-block {
   border: 2px solid var(--white);
 }
 
+.icon-button {
+  width: auto;
+  height: auto;
+  background: transparent;
+  padding: 0;
+}
+
+.order-dialog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--light-blue);
+  z-index: 9000;
+  padding: 60px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.order-dialog form {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-dialog_header {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-dialog_container {
+  display: flex;
+  flex-direction: column;
+}
+
 /*---*/
 
 /*main*/
@@ -341,31 +385,38 @@ footer .socmedia-block {
 
 /*contact*/
 
-.contact .order-block {
+.contact .order-block,
+.order-dialog .order-block {
   background: var(--light-blue);
   color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 35px;
   row-gap: 20px;
   min-height: 243px;
   box-sizing: border-box;
 }
 
-.contact .order-block.success {
+.contact .order-block {
+  padding: 35px;
+  justify-content: center;
+}
+
+.contact .order-block.success,
+.order-dialog .order-block.success {
   display: none;
 }
 
-.contact .order-block h2 {
+.contact .order-block h2,
+.order-dialog .order-block h2 {
   text-transform: initial;
   font-weight: 600;
   text-align: center;
   text-wrap: balance;
 }
 
-.contact .order-block h3 {
+.contact .order-block h3,
+.order-dialog .order-block h3 {
   text-align: center;
   font-family: Open Sans;
   font-size: 24px;
@@ -374,7 +425,8 @@ footer .socmedia-block {
   line-height: 45px;
 }
 
-.contact .order-block .policy {
+.contact .order-block .policy,
+.order-dialog .order-block .policy {
   font-family: Roboto Condensed;
   font-size: 16px;
   font-style: normal;
@@ -384,13 +436,15 @@ footer .socmedia-block {
   text-wrap: balance;
 }
 
-.contact .order-block .form {
+.contact .order-block .order-block_form,
+.order-dialog .order-block .order-block_form {
   display: flex;
   align-items: center;
   column-gap: 10px;
 }
 
-.contact .order-block .form input {
+.contact .order-block .order-block_form input,
+.order-dialog .order-block .order-block_form input {
   color: var(--dark-grey);
   text-align: center;
   font-family: Open Sans;
@@ -471,6 +525,16 @@ footer .socmedia-block {
   .container {
     padding: 0 20px;
   }
+
+  .order-dialog {
+    padding: 20px;
+  }
+
+  .order-dialog_header {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+  }
   /*---*/
 
   /*main*/
@@ -533,7 +597,8 @@ footer .socmedia-block {
   /*---*/
 
   /*contact*/
-  .contact .order-block {
+  .contact .order-block,
+  .order-dialog .order-block {
     min-height: 289px;
   }
 
@@ -596,28 +661,36 @@ footer .socmedia-block {
   /*---*/
 
   /*contact*/
-  .contact .order-block {
+  .contact .order-block,
+  .order-dialog .order-block {
     min-height: 232px;
+  }
+
+  .contact .order-block {
     padding: 20px;
   }
 
-  .contact .order-block h3 {
+  .contact .order-block h3,
+  .order-dialog .order-block h3 {
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
   }
 
-  .contact .order-block .form {
+  .contact .order-block .order-block_form,
+  .order-dialog .order-block .order-block_form {
     column-gap: 7px;
   }
 
-  .contact .order-block .form input {
+  .contact .order-block .order-block_form input,
+  .order-dialog .order-block .order-block_form input {
     width: 200%;
     font-size: 16px;
   }
 
-  .contact .order-block .form button {
+  .contact .order-block .order-block_form button,
+  .order-dialog .order-block .order-block_form button {
     padding-left: 7px;
     padding-right: 7px;
   }
