@@ -355,6 +355,11 @@ footer .socmedia-block {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.catalog ul li {
+  display: flex;
+  flex-direction: column;
+}
+
 .catalog ul li button {
   display: none;
 }
@@ -388,6 +393,7 @@ footer .socmedia-block {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  flex: 1;
 }
 /*---*/
 
