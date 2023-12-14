@@ -1,28 +1,63 @@
-const defaultOrderBlocks = document.getElementsByClassName(
-  "order-block default",
+// order block
+const orderBlockDefault = document.getElementById("order-block_default");
+const orderBlockSuccess = document.getElementById("order-block_success");
+const phoneInput = document.getElementById("order-block_phone-input");
+const submitButton = document.getElementById("order-block_submit-button");
+
+// dialog
+const dialogOrderBlockDefault = document.getElementById(
+  "order-dialog_order-block_default",
 );
-const successOrderBlocks = document.getElementsByClassName(
-  "order-block success",
+const dialogOrderBlockSuccess = document.getElementById(
+  "order-dialog_order-block_success",
 );
 const orderDialog = document.getElementsByClassName("order-dialog")[0];
 const openDialogButtons = document.getElementsByClassName("open-dialog-button");
-const orderButtons = document.getElementsByClassName("order-action-button");
+const dialogPhoneInput = document.getElementById(
+  "dialog_order-block_phone-input",
+);
+const dialogSubmitButton = document.getElementById(
+  "dialog_order-block_submit-button",
+);
+
+const maskOptions = {
+  mask: "+{380} 00 000 00 00",
+};
+const phoneInputMask = IMask(phoneInput, maskOptions);
+const dialogPhoneInputMask = IMask(dialogPhoneInput, maskOptions);
 
 const handleOrder = () => {
-  Array.from(defaultOrderBlocks).forEach(
-    (block) => (block.style.display = "none"),
-  );
-  Array.from(successOrderBlocks).forEach(
-    (block) => (block.style.display = "flex"),
-  );
+  if (
+    phoneInputMask.value.replaceAll("+", "").replaceAll(" ", "").length !== 12
+  )
+    return;
+
+  console.log(phoneInputMask.value);
+
+  orderBlockDefault.style.display = "none";
+  orderBlockSuccess.style.display = "flex";
 
   setTimeout(() => {
-    Array.from(defaultOrderBlocks).forEach(
-      (block) => (block.style.display = "flex"),
-    );
-    Array.from(successOrderBlocks).forEach(
-      (block) => (block.style.display = "none"),
-    );
+    orderBlockDefault.style.display = "flex";
+    orderBlockSuccess.style.display = "none";
+  }, 2000);
+};
+
+const handleDialogOrder = () => {
+  if (
+    dialogPhoneInputMask.value.replaceAll("+", "").replaceAll(" ", "")
+      .length !== 12
+  )
+    return;
+
+  console.log(dialogPhoneInputMask.value);
+
+  dialogOrderBlockDefault.style.display = "none";
+  dialogOrderBlockSuccess.style.display = "flex";
+
+  setTimeout(() => {
+    dialogOrderBlockDefault.style.display = "flex";
+    dialogOrderBlockSuccess.style.display = "none";
   }, 2000);
 };
 
@@ -33,6 +68,6 @@ const handleDialogOpen = () => {
 Array.from(openDialogButtons).forEach((button) =>
   button.addEventListener("click", handleDialogOpen),
 );
-Array.from(orderButtons).forEach((button) =>
-  button.addEventListener("click", handleOrder),
-);
+
+submitButton.addEventListener("click", handleOrder);
+dialogSubmitButton.addEventListener("click", handleDialogOrder);

@@ -161,22 +161,28 @@
           </ul>
         </section>
         <section class="contact">
-          <div class="order-block default">
+          <div id="order-block_default" class="order-block default">
             <h2>Замовляйте рідну VODA UA за номером телефону</h2>
             <div class="order-block_form">
               <input
+                id="order-block_phone-input"
                 type="tel"
                 inputmode="numeric"
                 name="phone"
                 placeholder="+380 93 984 20 48"
               />
-              <button class="with-border order-action-button">Замовити</button>
+              <button
+                id="order-block_submit-button"
+                class="with-border order-action-button"
+              >
+                Замовити
+              </button>
             </div>
             <p class="order-block_policy">
               Згідний на обробку персональних данних.
             </p>
           </div>
-          <div class="order-block success">
+          <div id="order-block_success" class="order-block success">
             <h2>Дякуємо за ваш запит.</h2>
             <h3>Ми зв`яжемось з вами найближчим часом!</h3>
           </div>
@@ -233,16 +239,24 @@
           </button>
         </div>
         <div class="order-dialog_container">
-          <div class="order-block default">
+          <div
+            id="order-dialog_order-block_default"
+            class="order-block default"
+          >
             <h2>Замовляйте рідну VODA UA за номером телефону</h2>
             <div class="order-block_form">
               <input
-                type="tel"
+                id="dialog_order-block_phone-input"
+                type="text"
                 inputmode="numeric"
                 name="phone"
                 placeholder="+380 93 984 20 48"
               />
-              <button class="with-border order-action-button" type="button">
+              <button
+                id="dialog_order-block_submit-button"
+                class="with-border order-action-button"
+                type="button"
+              >
                 Замовити
               </button>
             </div>
@@ -255,13 +269,17 @@
               відділення.
             </p>
           </div>
-          <div class="order-block success">
+          <div
+            id="order-dialog_order-block_success"
+            class="order-block success"
+          >
             <h2>Дякуємо за ваш запит.</h2>
             <h3>Ми зв`яжемось з вами найближчим часом!</h3>
           </div>
         </div>
       </form>
     </dialog>
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
