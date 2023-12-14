@@ -513,6 +513,15 @@ footer .socmedia-block {
 
 /*---*/
 
+.with-hover_regular-blue:hover {
+  background: var(--regular-blue);
+}
+
+.with-hover_white:hover {
+  color: var(--light-blue);
+  background: var(--white);
+}
+
 @media screen and (max-width: 1179px) {
   /*common*/
   section + section {
