@@ -138,7 +138,7 @@ table {
 body {
   background-color: var(--white);
   color: var(--dark-grey);
-  background-image: url("assets/images/main-background.png");
+  background-image: url("../assets/images/main-background.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
